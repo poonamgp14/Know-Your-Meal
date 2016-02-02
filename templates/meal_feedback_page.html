@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+<title> Missing food item</title>
+
+</head>
+<body>
+<form method="post">	
+<h3> Which other food item would you like to see here? </h3> 
+<h2> Add a Food </h2>
+<input type= "text" name = "missingItem" value={{missingItemValue}}>
+<button> Send </button>
+<p style="color:red;">	
+	{% if missingItemValue %}
+		You requested: {{missingItemValue}}
+	{% endif %}
+</p>
+
+	<div>
+		<h3>
+		{{feedback_str}}
+		</h3>
+		
+	</div>
+
+
+</form>
+
+</body>
+
+
+
+

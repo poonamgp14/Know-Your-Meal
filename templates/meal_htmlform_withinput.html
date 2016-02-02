@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Missing food item</title>
+
+</head>
+<body>
+<form method="post" action = "/testform">
+	<p style = "color:green">A balanced meal contains adequate amount of carbohydrates, fats, proteins and vitamins, minerals and fiber
+	to maintain good health. The below mentioned application can help you calcuate total amount of carbs, proteins
+	and fat.
+   <br> <br>
+	Note: You can either select one item or select from all four items. Access to this application is made available only if you have signed in to your Gmail account. This app
+	would prompt you to your gmail account if not already signed in and
+	fetches your gmail account's username ONLY.
+
+	<p style = "color:red">Please select egg(under proteins), whole milk(under fat), whole grain bread(under carbs), apple(under vitamin,mineral,fiber).</p>
+
+	<strong>Data Entry is done for these food items only.You can still select any option to play around with form
+	</strong>
+</p>
+<label>
+		Choose a Protein Source
+		<br>
+	<select name = "P">
+		<option selected> Select</option>
+		<option>Beans</option>
+		<option>Milk</option>
+		<option>Tofu</option>
+		<option>Edamame</option>
+		<option>Peas</option>
+		<option>Nuts</option>
+		<option>Chick Peas</option>
+		<option>Broccoli</option>
+		<option>Spinach</option>
+		<option>Chia Seeds</option>
+		<option>Egg</option>
+		<option>Cheese</option>
+		<option>Greek Yoghurt</option>
+	</select>
+</label>
+	<br><br>
+<label>
+		Choose a Carbohydrate Source
+		<br>
+	<select name = "C">
+		<option selected> Select</option>
+		<option>White Rice</option>
+		<option>Brown Rice</option>
+		<option>Par Boiled Rice</option>
+		<option>Bagels</option>
+		<option>Pasta</option>
+		<option>Whole Grains</option>
+		<option>Sweet Potatoes</option>
+		<option>Quinoa</option>
+		<option>Oatmeal</option>
+		<option>Pancake</option>
+		<option>Whole Grain Bread</option>
+	</select>
+</label>
+<br><br>
+<label>
+		Choose a Fat Source
+		<br>
+	<select name = "Fa">
+		<option selected> Select</option>
+		<option>Avacados</option>
+		<option>Dark CHocolocate</option>
+		<option>Coconut oil</option>
+		<option>Full Fat Yoghurt</option>
+		<option>Whole Milk</option>
+		<option>Egg Yolk</option>
+		<option>Olive Oil</option>
+		<option>Nuts</option>
+		<option>Cheese</option>
+		<option>Flax Seeds</option>
+	</select>
+</label>
+<br><br>
+<label>
+		Choose a Vitmain, Mineral and Fibre Source
+		<br>
+	<select name = "Fi">
+		<option selected> Select</option>
+		<option>Avacados</option>
+		<option>Dried Apricots</option>
+		<option>Orange</option>
+		<option>Apple</option>
+		<option>Baked Beans </option>
+		<option>Peas</option>
+		<option>Peanuts</option>
+		<option>Mixed Vegetable</option>
+		<option>Boiled Potato with Skin</option>
+	</select>
+</label>
+<br> <br>
+<input type = "submit"> </input>
+<br> <br>
+<div style = "color:red"><h3>
+	{% if output_str == 'None' %}
+		Error: Please select your choice of carbohydrate, protein, fat and fiber
+	{% else %}
+		{{output_str}}
+	{% endif %}
+</h3></div>
+
+</form>
+
+<form  action = "/feedback">
+
+	<div>
+	<b> Did not find your favorite food item? </b>
+	<button> Click Here! </button>
+</div>
+
+
+</form>
+</body>
+</html>
